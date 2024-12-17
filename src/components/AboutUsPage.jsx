@@ -7,7 +7,7 @@ function AboutUsPage() {
   useEffect(() => {
     // Fetching About Us content from the backend
     axios
-      .get('http://localhost:5000/api/aboutus')
+      .get('https://backend-nl6c.onrender.com/api/aboutus')
       .then((response) => {
         setAboutContent(response.data.content);
       })

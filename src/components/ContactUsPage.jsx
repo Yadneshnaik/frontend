@@ -9,7 +9,7 @@ function ContactUsPage() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    axios.post('http://localhost:5000/api/contacts', formData)
+    axios.post('https://backend-nl6c.onrender.com/api/contacts', formData)
       .then(res => setResponse(res.data.message))
       .catch(err => console.error(err));
   };

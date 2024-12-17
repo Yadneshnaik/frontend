@@ -8,7 +8,7 @@ function ServicesPage() {
 
   useEffect(() => {
     // Fetch all services
-    axios.get('http://localhost:5000/api/services')
+    axios.get('https://backend-nl6c.onrender.com/api/services')
       .then(response => setServices(response.data))
       .catch(err => console.error(err));
   }, []);
@@ -16,7 +16,7 @@ function ServicesPage() {
   const handleServiceClick = async (serviceId, serviceTitle) => {
     try {
       // Check if the service has plans
-      const response = await axios.get(`http://localhost:5000/api/services/${serviceId}/plans`);
+      const response = await axios.get(`https://backend-nl6c.onrender.com/api/services/${serviceId}/plans`);
       if (response.data.length > 0) {
         // Navigate to the respective plans page
         navigate(`/plans/${serviceId}`, { state: { serviceTitle } });

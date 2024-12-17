@@ -10,7 +10,7 @@ function PlansPage() {
 
     useEffect(() => {
         // Fetch plans for the service
-        axios.get(`http://localhost:5000/api/services/${serviceId}/plans`)
+        axios.get(`https://backend-nl6c.onrender.com/api/services/${serviceId}/plans`)
             .then(response => setPlans(response.data))
             .catch(err => console.error(err));
     }, [serviceId]);
