@@ -7,11 +7,13 @@ import Aboutus from './components/AboutUsPage';
 import ServicesPage from './components/ServicesPage';
 import ContactUsPage from './components/ContactUsPage';
 import PlansPage from './components/PlansPage';
+import OfferBanner from './components/OfferBanner';
 
 function App() {
   return (
     <Router>
       <Header />
+      <OfferBanner />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<Aboutus />} />
